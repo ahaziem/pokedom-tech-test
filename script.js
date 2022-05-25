@@ -1,4 +1,5 @@
 import { pokemonArray } from "./data/pokemon.js";
+pokemonArray = require("./data/pokemon.js")
 // console.log(pokemonArray);
 
 // need to do a for loop on object
@@ -9,6 +10,5 @@ const pokemonName = document.querySelector(".card__heading");
 const pokemonCard = document.querySelector(".card");
 const pokemonTypes = document.querySelector(".card__text");
 
-for (key in pokemonArray) {
-  console.log(key);
-}
+const keys = Object.keys(pokemonArray);
+console.log(keys);
