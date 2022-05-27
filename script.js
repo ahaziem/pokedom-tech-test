@@ -16,23 +16,18 @@ const nameOfPokemon = pokemonArray.map((nameOfPokemon) => {
   return nameOfPokemon.name;
 });
 
-console.log(nameOfPokemon);
-
-const idOfPokemon = Object.entries(pokemonArray);
-idOfPokemon.forEach((idOfPokemon) => {
-  return idOfPokemon[1].id;
+const idOfPokemon = pokemonArray.map((idOfPokemon) => {
+  return idOfPokemon.id;
 });
 
-const typeOfPokemon = Object.entries(pokemonArray);
-typeOfPokemon.forEach((typeOfPokemon) => {
-  return typeOfPokemon[1].types;
+const typeOfPokemon = pokemonArray.map((typeOfPokemon) => {
+  return typeOfPokemon.types;
 });
 
-const imageOfPokemon = Object.entries(pokemonArray);
-imageOfPokemon.forEach((imageOfPokemon) => {
-  return imageOfPokemon[1].sprite;
+const imageOfPokemon = pokemonArray.map((imageOfPokemon) => {
+  return imageOfPokemon.sprite;
 });
 
-pokemonImage.innerHTML += "<div>${imageOfPokemon}</div>";
+pokemonImage.innerHTML += `${imageOfPokemon}`;
 
-console.log(imageOfPokemon);
+// console.log(imageOfPokemon);

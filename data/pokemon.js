@@ -1,6 +1,5 @@
 export const pokemonArray = [
-  {
-    id: 1,
+  { id: 1,
     name: "bulbasaur",
     types: ["grass", "poison"],
     sprite:
