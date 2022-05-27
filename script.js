@@ -28,6 +28,6 @@ const imageOfPokemon = pokemonArray.map((imageOfPokemon) => {
   return imageOfPokemon.sprite;
 });
 
-pokemonImage.innerHTML += `${imageOfPokemon}`;
+pokemonImage.innerHTML += `<div>${imageOfPokemon}</div>`;
 
 // console.log(imageOfPokemon);
