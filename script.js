@@ -1,15 +1,13 @@
 import pokemonArray from "./data/pokemon.js";
-// console.log(pokemonArray);
 
-// need to do a for loop on object
 // need innerHTML to display it on the webpage
 
-// Create a variable to get access to the card from the HTML
-
+// const displayCard = document.querySelector(".card__content");
+// const card = document.querySelector(".card");
 const pokemonImage = document.querySelector(".card__image");
-// const pokemonName = document.querySelector(".card__heading");
-// const pokemonCard = document.querySelector(".card");
-// const pokemonTypes = document.querySelector(".card__text");
+const pokemonName = document.querySelector(".card__heading");
+const pokemonCard = document.querySelector(".card");
+const pokemonTypes = document.querySelector(".card__text");
 
 // create a variable that will go through the object in the array
 const nameOfPokemon = pokemonArray.map((nameOfPokemon) => {
@@ -28,6 +26,10 @@ const imageOfPokemon = pokemonArray.map((imageOfPokemon) => {
   return imageOfPokemon.sprite;
 });
 
-pokemonImage.innerHTML += `<div>${imageOfPokemon}</div>`;
+// card.style.display = "flex";
 
-// console.log(imageOfPokemon);
+pokemonImage.innerHTML = imageOfPokemon;
+pokemonName.innerHTML = nameOfPokemon;
+pokemonTypes.innerHTML = typeOfPokemon;
+
+// pokemonName.innerHTML = nameOfPokemon;
