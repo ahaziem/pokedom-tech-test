@@ -2,8 +2,8 @@ import pokemonArray from "./data/pokemon.js";
 
 // need innerHTML to display it on the webpage
 
-// const displayCard = document.querySelector(".card__content");
-// const card = document.querySelector(".card");
+const displayCard = document.querySelector(".card__content");
+const card = document.querySelector(".card");
 const pokemonImage = document.querySelector(".card__image");
 const pokemonName = document.querySelector(".card__heading");
 const pokemonCard = document.querySelector(".card");
@@ -28,8 +28,20 @@ const imageOfPokemon = pokemonArray.map((imageOfPokemon) => {
 
 // card.style.display = "flex";
 
-pokemonImage.innerHTML = imageOfPokemon;
-pokemonName.innerHTML = nameOfPokemon;
-pokemonTypes.innerHTML = typeOfPokemon;
+// pokemonImage.innerHTML = imageOfPokemon;
+// pokemonName.innerHTML = nameOfPokemon;
+// pokemonTypes.innerHTML = typeOfPokemon;
 
 // pokemonName.innerHTML = nameOfPokemon;
+
+const pokemonPrintCard = () => {
+  let printTheCard = "";
+  for (let i = 0; i <= pokemonArray.length; i++) {
+    printTheCard += pokemonArray[i];
+  }
+  return printTheCard;
+};
+
+console.log(pokemonPrintCard);
+
+displayCard.innerHTML = pokemonPrintCard;
