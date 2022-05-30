@@ -34,14 +34,10 @@ const imageOfPokemon = pokemonArray.map((imageOfPokemon) => {
 
 // pokemonName.innerHTML = nameOfPokemon;
 
-const pokemonPrintCard = () => {
+const pokemonPrintCard = (arr) => {
   let printTheCard = "";
-  for (let i = 0; i <= pokemonArray.length; i++) {
-    printTheCard += pokemonArray[i];
+  for (let i = 0; i <= arr.length; i++) {
+    printTheCard += arr[i];
   }
   return printTheCard;
 };
-
-console.log(pokemonPrintCard);
-
-displayCard.innerHTML = pokemonPrintCard;
