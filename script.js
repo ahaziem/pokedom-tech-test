@@ -26,18 +26,20 @@ const imageOfPokemon = pokemonArray.map((imageOfPokemon) => {
   return imageOfPokemon.sprite;
 });
 
-const pokemonPrintCard = (arr) => {
-  let printTheCard = "";
-  for (let i = 0; i <= arr.length; i++) {
-    printTheCard = +[i];
-  }
-  return ` <div class="card">
+const pokemonPrintCard = (array) => {
+  let printTheCard = array
+    .map(() => {
+      return ` <div class="card">
   <img class="card__image" src="${imageOfPokemon}"/>
   <div class="card__content">
     <div class="card__heading">${nameOfPokemon}</div>
     <p class="card__text">${typeOfPokemon}</p>
     </div>`;
+    })
+    .join("");
+
+  return printTheCard;
 };
 
-displayCard.innerHTML = "";
-displayCard.innerHTML += pokemonPrintCard;
+const characterCards = printTheCard(pokemonArray);
+displayCard.innerHTML = characterCards;
